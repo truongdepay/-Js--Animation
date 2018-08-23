@@ -1,3 +1,4 @@
+//script for index.html
 $(document).ready(function(){
 	$("#submit").click(function(){
 		var Animation = {
@@ -92,3 +93,23 @@ $(document).ready(function(){
 		$("style").append(Animation.creatKeyframe(num_point));
 	})
 });
+
+//script for facebook_form.html
+$(document).ready(function () {
+    $("#td_form_input").focus(function () {
+        $(this).addClass('form_focus');
+        $(this).removeClass('form_blur');
+        $(".td_box_form").addClass("td_box_form_focus");
+        $("#black_body").addClass("black_body_focus");
+        $(".td_option").slideDown(200);
+    })
+    $("#black_body").click(function () {
+        $("#td_form_input").addClass('form_blur');
+        $("#td_form_input").removeClass('form_focus');
+        $(".td_box_form").removeClass("td_box_form_focus");
+        $(this).removeClass("black_body_focus");
+        $(".td_option").slideUp(200);
+    })
+
+
+})
