@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title></title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <style>
+        body{
+            background: #00000008;
+        }
+        .form_focus{
+            background: #f8f8f8 !important;
+            transition: background 1s;
+        }
+        .form_blur{
+            background: #fff !important;
+            transition: background 1s;
+        }
+        .td_box_form{
+            background: #fff;
+            box-sizing: border-box;
+            position: relative;
+            padding: 10px;
+            z-index: 66;
+            border-radius: 3px;
+            border: 1px solid #00000017;
+        }
+        .td_box_form_focus{
+            box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.14);
+            transition: box-shadow 0.5s;
+        }
+        .black_body_focus{
+            background: #000;
+            opacity: 0.3;
+            transition: background 0.5s, opacity 0.5s;
+            min-width: 100%;
+            min-height: 100%;
+            position: absolute;
+            top: 0px;
+            z-index: 10;
+        }
+        .td_option {
+            display: none;
+        }
+        .td_option_focus{
+            height: auto;
+            transition: height 1s;
+        }
+    </style>
+</head>
+<body>
+
+<div class="row">
+    <div class="col-md">
+        <div class="mx-auto mt-3 td_box_form" style="width: 500px">
+            <nav class="nav">
+                <a class="nav-link active p-1" href="#">Tạo bài viết</a>
+                <a class="nav-link p-1" href="#">Đăng sản phẩm</a>
+            </nav>
+            <div class="form-group">
+                <textarea name="" id="td_form_input"  class="form-control "></textarea>
+            </div>
+            <div class="td_option">
+                <div class="row">
+                    <!--Status Option-->
+                    <div class="col">
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                            <label class="form-check-label" for="exampleRadios1">
+                                Chờ duyệt
+                            </label>
+                        </div>
+                        <div class="form-check">
+                            <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                            <label class="form-check-label" for="exampleRadios2">
+                                Công khai
+                            </label>
+                        </div>
+                    </div>
+                    <!--List Category-->
+                    <div class="col">
+                        <div class="btn-group float-right">
+                            <button class="btn btn-secondary btn-sm dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                Danh mục
+                            </button>
+                            <div class="dropdown-menu">
+                                <a href="#" class="dropdown-item">Bóng đá</a>
+                                <a href="#" class="dropdown-item">Thời trang</a>
+                                <a href="#" class="dropdown-item">Tin trong nước</a>
+                                <a href="#" class="dropdown-item">Tin ngoài nước</a>
+                                <a href="#" class="dropdown-item">Chính trị</a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <!--Button Share-->
+                <div class="row mt-3">
+                    <div class="col">
+                        <input type="submit" value="Share" class="btn btn-primary btn-block float-right" disabled>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div id="black_body"></div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+<script src="js/script.js"></script>
+</html>
