@@ -1,0 +1,67 @@
+body{
+    background: #00000008;
+}
+a {
+    text-decoration: none !important;
+}
+
+/*CSS Cac Class Co dinh*/
+.td_header_active {
+    font-weight:  700;
+}
+.td_active {
+    font-weight: 500;
+}
+.td_active_menu{
+    font-weight: 500;
+    background: #fff;
+    border: 1px solid #00000017;
+}
+
+/*CSS theo tung thanh phan*/
+
+.form_focus{
+    background: #f8f8f8 !important;
+    transition: background 1s;
+}
+.form_blur{
+    background: #fff !important;
+    transition: background 1s;
+}
+.td_box_form{
+    background: #fff;
+    box-sizing: border-box;
+    position: relative;
+    padding: 10px;
+    z-index: 66;
+    border-radius: 3px;
+    border: 1px solid #00000017;
+}
+.td_box_form_focus{
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.14);
+    transition: box-shadow 0.5s;
+}
+.black_body_focus{
+    background: #000;
+    opacity: 0.3;
+    transition: background 0.5s, opacity 0.5s;
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    top: 0px;
+    z-index: 10;
+}
+.td_option {
+    display: none;
+}
+.td_option_focus{
+    height: auto;
+    transition: height 1s;
+}
+.td_sidebar_left{
+    background: #f7f7f7;
+}
+.td_user_image {
+    width: 45px;
+    clip-path: circle();
+}

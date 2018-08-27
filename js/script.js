@@ -91,25 +91,51 @@ $(document).ready(function(){
 		$("body").html(Animation.creatPoint(num_point, prefixDiv));
 		$("style").append(Animation.creatCss(num_point, prefixDiv));
 		$("style").append(Animation.creatKeyframe(num_point));
-	})
+	});
 });
+
 
 //script for facebook_form.html
 $(document).ready(function () {
+    //Scrip xu ly cho form dang bai
     $("#td_form_input").focus(function () {
         $(this).addClass('form_focus');
         $(this).removeClass('form_blur');
         $(".td_box_form").addClass("td_box_form_focus");
         $("#black_body").addClass("black_body_focus");
         $(".td_option").slideDown(200);
-    })
+    });
     $("#black_body").click(function () {
         $("#td_form_input").addClass('form_blur');
         $("#td_form_input").removeClass('form_focus');
         $(".td_box_form").removeClass("td_box_form_focus");
         $(this).removeClass("black_body_focus");
         $(".td_option").slideUp(200);
-    })
+    });
+    //Scrip xu ly button upload image
+    var height_btn = $("#td_pload_image").css("height");
+    var width_btn = $("#td_pload_image").css("width");
+    $("input[name='thumbnail']").css({"height":height_btn, "width":width_btn});
 
+    //script xu ly tao tag
+    var value_hidden = '';
+    $("input[data-toggle=\"keyword\"]").keyup(function(event){
+        let value = $(this).val();
+        let name_hidden = 'input[name='+$(this).attr("name-hidden")+']';
+        if (value != '' && event.keyCode === 13) {
+            value_hidden = (!value_hidden)?value:value_hidden+`,${value}`;
+            $(name_hidden).val(value_hidden);
+            let html = `<div class="btn-primary d-inline btn-sm rounded p-2 m-1">${value} <button class="btn btn-primary p-0" ><i class="icon-remove p-1"></i></button></div>`
+            $("#td_tag").append(html);
+            $(this).val(null);
+            $("#td_tag div button").click(function()
+            {
 
-})
+                let name_hidden = 'input[name='+$(this).attr("name-hidden")+']';
+                let get_value = $(name_hidden).val();
+                let text_del = $(this).parent().text();
+                console.log(text_del);
+            });
+        }
+    });
+});
