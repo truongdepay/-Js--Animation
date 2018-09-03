@@ -47,7 +47,7 @@ a {
     transition: background 0.5s, opacity 0.5s;
     min-width: 100%;
     min-height: 100%;
-    position: absolute;
+    position: fixed;
     top: 0px;
     z-index: 10;
 }
@@ -64,4 +64,18 @@ a {
 .td_user_image {
     width: 45px;
     clip-path: circle();
+}
+.td_post_admin .td_img_author{
+    width: 65px;
+    clip-path: circle();
+    border: 1px solid;
+}
+.td_pro_admin .img-fluid {
+    width: 100%;
+}
+.td_public {
+    border-left: 5px #28a745 solid;
+}
+.td_hidden {
+    border-left: 5px #dc3545 solid;
 }

@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title></title>
+    <link rel="stylesheet" href="./css/bootstrap.min.css">
+    <link rel="stylesheet" href="./css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/styles.css">
+</head>
+<body>
+<div class="row mt-5">
+
+    <!--
+        left sidebar
+    -->
+    <div class="col-md-3 d-none d-md-block">
+        <div class="td_sidebar_left float-right pl-2">
+            <!--user-->
+            <div class="td_user">
+                <img src="./img/ruud-van-nistelrooy-ya9naopg53o21oy28i85vfata-1485478038186-0-108-1079-1845-crop-1485478045335.jpg" alt="" class="td_user_image">
+                <a href="#" class="text-dark td_active">Ruud Vanistelrooy</a>
+            </div>
+
+            <!--list-->
+            <div class="td_sidebar_list mt-3">
+                <!--List Top-->
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link pl-1 pt-1 pb-1 text-dark " href="#"><i class="icon-home"></i> Tổng quan</a>
+                    </li>
+                </ul>
+                <!--List Post-->
+                <p class="pb-0 pt-3 text-muted m-0"><small>Bài viết</small></p>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link pl-1 pt-1 pb-1 text-dark" href="#"><i class="icon-file-text"></i> Xem các bài viết</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pl-1 pt-1 pb-1 text-dark" href="#"><i class="icon-edit"></i> Viết một bài mới</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pl-1 pt-1 pb-1 text-dark" href="#"><i class="icon-list-alt"></i> Quản lý các mục tin tức</a>
+                    </li>
+                </ul>
+                <!--List Product-->
+                <p class="pb-0 pt-3 text-muted m-0"><small>Sản phẩm</small></p>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link pl-1 pt-1 pb-1 text-dark rounded td_active_menu" href="#"><i class="icon-suitcase"></i> Xem các sản phẩm</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pl-1 pt-1 pb-1 text-dark" href="#"><i class="icon-edit"></i> Tạo mới một món hàng</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link pl-1 pt-1 pb-1 text-dark" href="#"><i class="icon-list-alt"></i> Xem các mục sản phẩm</a>
+                    </li>
+                </ul>
+
+                <!--List Config-->
+                <p class="pb-0 pt-3 text-muted m-0"><small>Khác...</small></p>
+                <ul class="nav flex-column">
+                    <li class="nav-item">
+                        <a class="nav-link pl-1 pt-1 pb-1 text-dark" href="#"><i class="icon-cog"></i> Cấu hình trang web</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+    <!--start list post-->
+    <div class="col-md-6">
+        <div class="row">
+            <div class=" col td_box_form mb-5">
+
+                <!--Header-->
+
+                <nav class="nav">
+                    <a class="nav-link active p-1 td_header_active" href="#">Tạo bài viết</a>
+                    <a class="nav-link p-1" href="#">Đăng sản phẩm</a>
+                </nav>
+
+                <!--form input-->
+
+                <div class="form-group">
+                    <textarea name="" id="td_form_input"  class="form-control "></textarea>
+                </div>
+                <nav class="nav position-relative">
+                    <button type="button" class="btn btn-default" id="td_pload_image"><i class="icon-picture"></i> Ảnh</button>
+                    <input type="file" class="position-absolute p-0" name="thumbnail" style="opacity: 0.0">
+                </nav>
+                <div class="td_option mt-3">
+                    <div class="row">
+                        <div class="col">
+                            <div class="form-group">
+                                <label for="" class="text-muted">Tiêu đề</label>
+                                <input type="text" class="form-control">
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="text-muted">Mô tả</label>
+                                <textarea class="form-control"></textarea>
+                            </div>
+                            <div class="form-group">
+                                <label for="" class="text-muted">Từ khóa</label>
+                                <input type="text" class="form-control" data-toggle="keyword" name-hidden="keyword">
+                                <input type="hidden" name="keyword">
+                            </div>
+                            <div class="form-group p-2 row" id="td_tag">
+
+                            </div>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <!--Status Option-->
+                        <div class="col">
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios1" value="option1" checked>
+                                <label class="form-check-label" for="exampleRadios1">
+                                    Chờ duyệt
+                                </label>
+                            </div>
+                            <div class="form-check">
+                                <input class="form-check-input" type="radio" name="exampleRadios" id="exampleRadios2" value="option2">
+                                <label class="form-check-label" for="exampleRadios2">
+                                    Công khai
+                                </label>
+                            </div>
+                        </div>
+                    </div>
+                    <!--Button Share-->
+                    <div class="row mt-3">
+                        <!--List Category-->
+                        <div class="col-3">
+                            <div class="btn-group float-left">
+                                <button class="btn btn-secondary dropdown-toggle" type="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                    Danh mục
+                                </button>
+                                <div class="dropdown-menu">
+                                    <a href="#" class="dropdown-item">Bóng đá</a>
+                                    <a href="#" class="dropdown-item">Thời trang</a>
+                                    <a href="#" class="dropdown-item">Tin trong nước</a>
+                                    <a href="#" class="dropdown-item">Tin ngoài nước</a>
+                                    <a href="#" class="dropdown-item">Chính trị</a>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-9">
+                            <input type="submit" value="Share" class="btn btn-primary btn-block float-right" disabled>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <table class="table bg-white shadow-sm rounded">
+                <tr class="td_public">
+                    <td style="width: 90px"><img src="./img/sp1.jpg" alt="" style="width: 80px"></td>
+                    <td>
+                        <h5 class="text-uppercase text-black-50 mb-0">Iphone 6 Plus</h5>
+                        <p class="text-muted text-uppercase mb-0"><small>code: #005006</small></p>
+                        <p class="text-danger text-uppercase mb-0"><small class="font-weight-bold">price: 11,000,000 VND</small></p>
+                        <p class="text-black-50 mb-0"><small class="font-italic">12/08/2018 14:00 - admin</small></p>
+                    </td>
+                    <td>
+                        <div class="float-right">
+                            <ul class="list-group-flush">
+                                <li class="list-group-item"><a href="" title="Edit"><i class="icon-edit"></i></a></li>
+                                <li class="list-group-item"><a href="" title="Delete"><i class="icon-trash"></i></a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+                <tr class="td_hidden">
+                    <td style="width: 90px"><img src="./img/sp5.jpg" alt="" style="width: 80px"></td>
+                    <td>
+                        <h5 class="text-uppercase text-black-50 mb-0">Apple Macbook Pro Touch MR9Q2SA/A i5 2.3GHz (2018)</h5>
+                        <p class="text-muted text-uppercase mb-0"><small>code: #005006</small></p>
+                        <p class="text-danger text-uppercase mb-0"><small class="font-weight-bold">price: 12,067,340 VND</small></p>
+                        <p class="text-black-50 mb-0"><small class="font-italic">11/08/2018 19:00 - admin</small></p>
+                    </td>
+                    <td>
+                        <div class="float-right">
+                            <ul class="list-group-flush">
+                                <li class="list-group-item"><a href="" title="Edit"><i class="icon-edit"></i></a></li>
+                                <li class="list-group-item"><a href="" title="Delete"><i class="icon-trash"></i></a></li>
+                            </ul>
+                        </div>
+                    </td>
+                </tr>
+            </table>
+        </div>
+    </div>
+    <!--end list post-->
+
+    <!--
+        right sidebar
+    -->
+    <div class="col-md-3 d-none d-md-block d-none d-md-block">
+        <div class="td_sidebar_list pr-2">
+            <p class="pb-0 text-muted m-0"><small>Danh mục</small></p>
+            <ul class="nav flex-column">
+                <li class="nav-item">
+                    <a class="nav-link pl-1 pt-1 pb-1 text-dark rounded td_active_menu" href="#">Tất cả</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link pl-1 pt-1 pb-1 text-dark" href="#">Máy tính</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link pl-1 pt-1 pb-1 text-dark" href="#">Điện thoại</a>
+                </li>
+            </ul>
+            <!--List Product-->
+        </div>
+    </div>
+</div>
+<div id="black_body"></div>
+</body>
+<script src="https://code.jquery.com/jquery-3.3.1.js"></script>
+<script src="https://unpkg.com/popper.js/dist/umd/popper.min.js"></script>
+<script src="./js/bootstrap.min.js" ></script>
+<script src="js/script.js"></script>
+</html>
