@@ -125,7 +125,7 @@ $(document).ready(function () {
         if (value != '' && event.keyCode === 13) {
             value_hidden = (!value_hidden)?value:value_hidden+`,${value}`;
             $(name_hidden).val(value_hidden);
-            let html = `<span class="p-2 m-1 bg-primary text-white">${value}<a class="p-0" name-hidden="${$(this).attr("name-hidden")}" onclick="delete_tag(this)" ><i class="icon-remove p-1"></i></a></span>`
+            let html = `<span class="p-2 m-1 bg-primary text-white rounded">${value}<a class="p-0" name-hidden="${$(this).attr("name-hidden")}" onclick="delete_tag(this)" ><i class="icon-remove p-1"></i></a></span>`
             $("#td_tag").append(html);
             $(this).val(null);
         }
